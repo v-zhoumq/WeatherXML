@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/weather2"
+    android:focusable="true" 
+	android:focusableInTouchMode="true" 
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_edt_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="CITY"
+        android:textColor="#ffffff"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        />
+    
+    <LinearLayout
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/edt_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="输入城市拼音" 
+            android:layout_weight="1.0"
+            android:textColor="#ffffff"
+            android:digits="abcdefghijklmnopqrstuvwxyz"
+            />
+
+        <Button
+            android:id="@+id/btn_getWeaInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/btn"
+            android:textColor="#ffffff"
+            android:text="刷新" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="#dddddd"
+        />
+    <ListView 
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0"
+        ></ListView>
+
+</LinearLayout>
